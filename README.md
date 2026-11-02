@@ -35,6 +35,14 @@ The upstream fix propagates `BROTLI_DECODER_ERROR_FORMAT_BLOCK_SWITCH` instead o
 - Denial of service (crash / resource exhaustion)
 - Potential code execution under favourable conditions
 
+## Detection & Mitigation
+
+- Update Brotli to 1.0.10 / 1.1.1 / 1.2.1 or newer
+- Prefer applications that use a patched version of the library
+- Monitor for unusual crashes in services that accept `Content-Encoding: br`
+- Restrict or disable Brotli decompression for untrusted input where possible
+
+
 ## Disclaimer
 
 This repository is published by **Sable Research** for educational and defensive research purposes only.  
